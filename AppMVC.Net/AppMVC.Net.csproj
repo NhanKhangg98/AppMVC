@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Database\Data\" />
+    <Folder Include="Areas\Database\Models\" />
+    <Folder Include="Areas\ProductManage\Data\" />
+    <Folder Include="Areas\ProductManage\Models\" />
     <Folder Include="Files\" />
     <Folder Include="wwwroot\Planet\" />
   </ItemGroup>

@@ -367,3 +367,7 @@ D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\AppMVC.Net.csproj.CopyComp
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\AppMVC.Net.dll
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\AppMVC.Net.pdb
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\AppMVC.Net.genruntimeconfig.cache
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\ProductManage\Views\Product\Index.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\ProductManage\Views\_ViewImports.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\ProductManage\Views\_ViewStart.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Database\Views\DbManage\Index.cshtml.g.cs

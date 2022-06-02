@@ -122,6 +122,12 @@ namespace AppMVC.Net
                     //}
                     );
 
+                endpoints.MapAreaControllerRoute(
+                    name: "product",
+                    pattern: "/{controller=Home}/{action=Index}/{id?}",
+                    areaName: "ProductManage" 
+                    );
+
                 // URl = start-here
                 // controller =>
                 // action =>
@@ -131,9 +137,8 @@ namespace AppMVC.Net
                     name:"default",
                     pattern:"/{controller=Home}/{action=Index}/{id?}"
                     );
-                
 
-                endpoints.MapRazorPages();
+                endpoints.MapRazorPages();   
             });
         }
     }
