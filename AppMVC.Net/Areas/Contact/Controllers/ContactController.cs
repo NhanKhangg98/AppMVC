@@ -10,7 +10,7 @@ using ContactModel = AppMVC.Net.Models.Contacts.Contact;
 using Microsoft.AspNetCore.Authorization;
 
 
-namespace App.Areas.Contact.Controllers
+namespace AppMVC.Net.Areas.Contact.Controllers
 {
     [Area("Contact")]
     
