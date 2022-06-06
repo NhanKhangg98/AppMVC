@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\TestCode\AppMVC\AppMVC.Net\Areas\Contact\Views\_ViewImports.cshtml"
-using App;
+using AppMVC;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "D:\TestCode\AppMVC\AppMVC.Net\Areas\Contact\Views\_ViewImports.cshtml"
-using App.Models;
+using AppMVC.Net.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c31701db1fbd2949701d7aa9279233a2a711ee15", @"/Areas/Contact/Views/Contact/Delete.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12334568134fabec32ff1911f23453426e7f6405", @"/Areas/Contact/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3160b04faa8b14f5a0d90d96fd41d300054c189c", @"/Areas/Contact/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Contact_Views_Contact_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<AppMVC.Net.Models.Contacts.Contact>
     #nullable disable
@@ -162,9 +162,9 @@ Write(ViewData["Title"]);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n    \r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c31701db1fbd2949701d7aa9279233a2a711ee158221", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c31701db1fbd2949701d7aa9279233a2a711ee158231", async() => {
                 WriteLiteral("\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c31701db1fbd2949701d7aa9279233a2a711ee158487", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c31701db1fbd2949701d7aa9279233a2a711ee158497", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -187,7 +187,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n        <input type=\"submit\" value=\"Xóa\" class=\"btn btn-danger\" /> |\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c31701db1fbd2949701d7aa9279233a2a711ee1510262", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c31701db1fbd2949701d7aa9279233a2a711ee1510272", async() => {
                     WriteLiteral("Danh sách liên hệ");
                 }
                 );

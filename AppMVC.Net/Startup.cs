@@ -1,6 +1,5 @@
-﻿using App.Models;
+﻿using AppMVC.Net.Models;
 using AppMVC.Net.ExtendMethods;
-using AppMVC.Net.Models;
 using AppMVC.Net.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

@@ -1,4 +1,4 @@
-﻿using App.Models;
+﻿using AppMVC.Net.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;

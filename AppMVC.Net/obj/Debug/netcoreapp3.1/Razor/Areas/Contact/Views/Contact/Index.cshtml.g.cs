@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\TestCode\AppMVC\AppMVC.Net\Areas\Contact\Views\_ViewImports.cshtml"
-using App;
+using AppMVC;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "D:\TestCode\AppMVC\AppMVC.Net\Areas\Contact\Views\_ViewImports.cshtml"
-using App.Models;
+using AppMVC.Net.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"92deef44081f9172a13780d464f3f823805c8e95", @"/Areas/Contact/Views/Contact/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12334568134fabec32ff1911f23453426e7f6405", @"/Areas/Contact/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3160b04faa8b14f5a0d90d96fd41d300054c189c", @"/Areas/Contact/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Contact_Views_Contact_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<AppMVC.Net.Models.Contacts.Contact>>
     #nullable disable
@@ -142,7 +142,7 @@ using App.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92deef44081f9172a13780d464f3f823805c8e956946", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92deef44081f9172a13780d464f3f823805c8e956956", async() => {
                 WriteLiteral("Xem");
             }
             );
@@ -173,7 +173,7 @@ using App.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral(" |\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92deef44081f9172a13780d464f3f823805c8e959104", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92deef44081f9172a13780d464f3f823805c8e959114", async() => {
                 WriteLiteral("Xóa");
             }
             );

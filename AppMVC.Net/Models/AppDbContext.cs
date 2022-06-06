@@ -1,15 +1,13 @@
 ﻿using AppMVC.Net.Models.Contacts;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace App.Models
+namespace AppMVC.Net.Models
 {
-    // razorweb.models.MyBlogContext
-    public class AppDbContext : DbContext
+    public class AppDbContext: DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
@@ -33,7 +31,6 @@ namespace App.Models
 
         }
 
-        public DbSet<Contact> Contacts{ get; set; }
-
+        public DbSet<Contact> Contacts { get; set; }
     }
 }

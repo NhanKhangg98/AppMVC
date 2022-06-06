@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\TestCode\AppMVC\AppMVC.Net\Areas\Contact\Views\_ViewImports.cshtml"
-using App;
+using AppMVC;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "D:\TestCode\AppMVC\AppMVC.Net\Areas\Contact\Views\_ViewImports.cshtml"
-using App.Models;
+using AppMVC.Net.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"83c9b762d0411556a42997c9bc8cb14afdaac085", @"/Areas/Contact/Views/Contact/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12334568134fabec32ff1911f23453426e7f6405", @"/Areas/Contact/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3160b04faa8b14f5a0d90d96fd41d300054c189c", @"/Areas/Contact/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Contact_Views_Contact_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<AppMVC.Net.Models.Contacts.Contact>
     #nullable disable
@@ -156,7 +156,7 @@ Write(ViewData["Title"]);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83c9b762d0411556a42997c9bc8cb14afdaac0857177", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83c9b762d0411556a42997c9bc8cb14afdaac0857187", async() => {
                 WriteLiteral("Danh sách liên hệ");
             }
             );

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using App.Models;
+using AppMVC.Net.Models;
 using ContactModel = AppMVC.Net.Models.Contacts.Contact;
 using Microsoft.AspNetCore.Authorization;
 
