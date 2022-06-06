@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using AppMVC.Net.Models.Contacts;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace App.Models
@@ -14,7 +15,7 @@ namespace App.Models
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             base.OnConfiguring(builder);
-            builder.UseSqlServer(@"Server=DESKTOP-D67BF1B\SQLEXPRESS;Database=appmvc;Trusted_Connection=True;");
+            //builder.UseSqlServer(@"Server=DESKTOP-D67BF1B\SQLEXPRESS;Database=appmvc;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,7 +33,7 @@ namespace App.Models
 
         }
 
-
+        public DbSet<Contact> Contacts{ get; set; }
 
     }
 }

@@ -371,3 +371,13 @@ D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\ProductManage\
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\ProductManage\Views\_ViewImports.cshtml.g.cs
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\ProductManage\Views\_ViewStart.cshtml.g.cs
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Database\Views\DbManage\Index.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Database\Views\_ViewImports.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Database\Views\_ViewStart.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Database\Views\DbManage\DeleteDb.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_MenuManagePartial.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Contact\Views\Contact\Delete.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Contact\Views\Contact\Details.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Contact\Views\Contact\Index.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Contact\Views\Contact\SendContact.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Contact\Views\_ViewImports.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Contact\Views\_ViewStart.cshtml.g.cs

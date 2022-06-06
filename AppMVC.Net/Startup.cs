@@ -62,11 +62,7 @@ namespace AppMVC.Net
             //services.AddSingleton(typeof(ProductService));
             services.AddSingleton(typeof(ProductService), typeof(ProductService));
             services.AddSingleton<PlanetService>();
-            // Đăng ký AppDbContext, sử dụng kết nối đến MS SQL Server
-            services.AddDbContext<AppDbContext>(options => {
-                string connectstring = Configuration.GetConnectionString("MyBlogContext");
-                options.UseSqlServer(connectstring);
-            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
