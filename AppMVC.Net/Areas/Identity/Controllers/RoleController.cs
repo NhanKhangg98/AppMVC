@@ -42,7 +42,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
         }
 
         [TempData]
-        public string StatusMessage { get; set; }
+        public string Notify { get; set; }
 
         //
         // GET: /Role/Index
@@ -90,7 +90,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
             var result = await _roleManager.CreateAsync(newRole);
             if (result.Succeeded)
             {
-                StatusMessage = $"Bạn vừa tạo role mới: {model.Name}";
+                Notify = $"Bạn vừa tạo role mới: {model.Name}";
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -126,7 +126,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
 
             if (result.Succeeded)
             {
-                StatusMessage = $"Bạn vừa xóa: {role.Name}";
+                Notify = $"Bạn vừa xóa: {role.Name}";
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -177,7 +177,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
 
             if (result.Succeeded)
             {
-                StatusMessage = $"Bạn vừa đổi tên: {model.Name}";
+                Notify = $"Bạn vừa đổi tên: {model.Name}";
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -236,7 +236,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
                 return View(model);
             }
 
-            StatusMessage = "Vừa thêm đặc tính (claim) mới";
+            Notify = "Vừa thêm đặc tính (claim) mới";
 
             return RedirectToAction("Edit", new { roleid = role.Id });
 
@@ -293,7 +293,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
 
             await _context.SaveChangesAsync();
 
-            StatusMessage = "Vừa cập nhật claim";
+            Notify = "Vừa cập nhật claim";
 
             return RedirectToAction("Edit", new { roleid = role.Id });
         }
@@ -321,7 +321,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
 
             await _roleManager.RemoveClaimAsync(role, new Claim(claim.ClaimType, claim.ClaimValue));
 
-            StatusMessage = "Vừa xóa claim";
+            Notify = "Vừa xóa claim";
 
 
             return RedirectToAction("Edit", new { roleid = role.Id });

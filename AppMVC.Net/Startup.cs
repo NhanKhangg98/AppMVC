@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using AppMVC.Net.Data;
 
 namespace AppMVC.Net
 {
@@ -126,6 +127,15 @@ namespace AppMVC.Net
                     ;
 
             services.AddSingleton<IdentityErrorDescriber, AppIdentityErrorDescriber>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("ViewManageMenu", builder =>
+                {
+                    builder.RequireAuthenticatedUser();
+                    builder.RequireRole(RoleName.Administrator);
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

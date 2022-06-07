@@ -42,7 +42,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(ManageMessageId? message = null)
         {
-            ViewData["StatusMessage"] =
+            ViewData["Notify"] =
                 message == ManageMessageId.ChangePasswordSuccess ? "Đã thay đổi mật khẩu."
                 : message == ManageMessageId.SetPasswordSuccess ? "Đã đặt lại mật khẩu."
                 : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
@@ -158,7 +158,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
         [HttpGet]
         public async Task<IActionResult> ManageLogins(ManageMessageId? message = null)
         {
-            ViewData["StatusMessage"] =
+            ViewData["Notify"] =
                 message == ManageMessageId.RemoveLoginSuccess ? "Đã loại bỏ liên kết tài khoản."
                 : message == ManageMessageId.AddLoginSuccess ? "Đã thêm liên kết tài khoản"
                 : message == ManageMessageId.Error ? "Có lỗi."

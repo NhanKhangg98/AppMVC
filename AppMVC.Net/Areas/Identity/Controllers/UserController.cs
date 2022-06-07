@@ -47,7 +47,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
 
 
         [TempData]
-        public string StatusMessage { get; set; }
+        public string Notify { get; set; }
 
         //
         // GET: /ManageUser/Index
@@ -156,7 +156,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
             }
 
 
-            StatusMessage = $"Vừa cập nhật role cho user: {model.user.UserName}";
+            Notify = $"Vừa cập nhật role cho user: {model.user.UserName}";
 
             return RedirectToAction("Index");
         }
@@ -214,7 +214,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
                 return View(model);
             }
 
-            StatusMessage = $"Vừa cập nhật mật khẩu cho user: {user.UserName}";
+            Notify = $"Vừa cập nhật mật khẩu cho user: {user.UserName}";
 
             return RedirectToAction("Index");
         }
@@ -248,7 +248,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
             }
 
             await _userManager.AddClaimAsync(user, new Claim(model.ClaimType, model.ClaimValue));
-            StatusMessage = "Đã thêm đặc tính cho user";
+            Notify = "Đã thêm đặc tính cho user";
 
             return RedirectToAction("AddRole", new { id = user.Id });
         }
@@ -295,7 +295,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
             userclaim.ClaimValue = model.ClaimValue;
 
             await _context.SaveChangesAsync();
-            StatusMessage = "Bạn vừa cập nhật claim";
+            Notify = "Bạn vừa cập nhật claim";
 
 
             ViewBag.user = user;
@@ -313,7 +313,7 @@ namespace AppMVC.Net.Areas.Identity.Controllers
 
             await _userManager.RemoveClaimAsync(user, new Claim(userclaim.ClaimType, userclaim.ClaimValue));
 
-            StatusMessage = "Bạn đã xóa claim";
+            Notify = "Bạn đã xóa claim";
 
             return RedirectToAction("AddRole", new { id = user.Id });
         }
