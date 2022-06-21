@@ -19,6 +19,8 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using AppMVC.Net.Data;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace AppMVC.Net
 {
@@ -66,7 +68,7 @@ namespace AppMVC.Net
             //services.AddSingleton<ProductService>();
             //services.AddSingleton<ProductService, ProductService>();
             //services.AddSingleton(typeof(ProductService));
-            services.AddSingleton(typeof(ProductService), typeof(ProductService));
+            // services.AddSingleton(typeof(ProductService), typeof(ProductService));
             services.AddSingleton<PlanetService>();
 
             // Dang ky Identity
@@ -153,6 +155,16 @@ namespace AppMVC.Net
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            // /contents/1.jpg => Uploads/1.jpg
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "Uploads")
+                    ),
+                RequestPath = "/contents"
+            });
+
             app.AddStatusCodePage();
 
             app.UseRouting();

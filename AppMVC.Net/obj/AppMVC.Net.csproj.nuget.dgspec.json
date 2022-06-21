@@ -43,6 +43,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[33.1.1, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[3.1.1, )"
@@ -126,6 +130,22 @@
             "MimeKit": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "elFinder.Net.AspNetCore": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "elFinder.Net.Core": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "elFinder.Net.Drivers.FileSystem": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "elFinder.NetCore": {
+              "target": "Package",
+              "version": "[1.3.5, )"
             }
           },
           "imports": [
@@ -146,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

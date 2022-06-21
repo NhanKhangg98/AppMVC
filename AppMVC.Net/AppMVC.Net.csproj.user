@@ -11,6 +11,14 @@
     <WebStackScaffolding_DependencyDialogWidth>650</WebStackScaffolding_DependencyDialogWidth>
     <Area_SelectedScaffolderID>AreaScaffolder</Area_SelectedScaffolderID>
     <Area_SelectedScaffolderCategoryPath>root/Common</Area_SelectedScaffolderCategoryPath>
+    <WebStackScaffolding_ViewDialogWidth>650</WebStackScaffolding_ViewDialogWidth>
+    <WebStackScaffolding_DbContextDialogWidth>650</WebStackScaffolding_DbContextDialogWidth>
+    <WebStackScaffolding_ControllerDialogWidth>650</WebStackScaffolding_ControllerDialogWidth>
+    <WebStackScaffolding_IsLayoutPageSelected>True</WebStackScaffolding_IsLayoutPageSelected>
+    <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
+    <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
+    <WebStackScaffolding_DbContextTypeFullName>AppMVC.Net.Models.AppDbContext</WebStackScaffolding_DbContextTypeFullName>
+    <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_Layout.cshtml</WebStackScaffolding_LayoutPageFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

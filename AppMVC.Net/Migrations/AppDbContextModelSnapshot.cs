@@ -90,6 +90,99 @@ namespace AppMVC.Net.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("AppMVC.Net.Models.Blog.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ParentCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentCategoryId");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Blog.Post", b =>
+                {
+                    b.Property<int>("PostId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AuthorId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Published")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(160)")
+                        .HasMaxLength(160);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(160)")
+                        .HasMaxLength(160);
+
+                    b.HasKey("PostId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("Slug")
+                        .IsUnique()
+                        .HasFilter("[Slug] IS NOT NULL");
+
+                    b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Blog.PostCategory", b =>
+                {
+                    b.Property<int>("PostID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.HasKey("PostID", "CategoryID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("PostCategory");
+                });
+
             modelBuilder.Entity("AppMVC.Net.Models.Contacts.Contact", b =>
                 {
                     b.Property<int>("Id")
@@ -119,6 +212,122 @@ namespace AppMVC.Net.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Product.CategoryProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ParentCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentCategoryId");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("CategoryProduct");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Product.ProductCategoryProduct", b =>
+                {
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductID", "CategoryID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("ProductCategoryProduct");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Product.ProductModel", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AuthorId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("Published")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(160)")
+                        .HasMaxLength(160);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(160)")
+                        .HasMaxLength(160);
+
+                    b.HasKey("ProductId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("Slug")
+                        .IsUnique()
+                        .HasFilter("[Slug] IS NOT NULL");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Product.ProductPhoto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("ProductPhoto");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -250,6 +459,73 @@ namespace AppMVC.Net.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("UserTokens");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Blog.Category", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.Blog.Category", "ParentCategory")
+                        .WithMany("CategoryChildren")
+                        .HasForeignKey("ParentCategoryId");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Blog.Post", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.AppUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Blog.PostCategory", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.Blog.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AppMVC.Net.Models.Blog.Post", "Post")
+                        .WithMany("PostCategories")
+                        .HasForeignKey("PostID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Product.CategoryProduct", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.Product.CategoryProduct", "ParentCategory")
+                        .WithMany("CategoryChildren")
+                        .HasForeignKey("ParentCategoryId");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Product.ProductCategoryProduct", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.Product.CategoryProduct", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AppMVC.Net.Models.Product.ProductModel", "Product")
+                        .WithMany("ProductCategoryProducts")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Product.ProductModel", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.AppUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Product.ProductPhoto", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.Product.ProductModel", "Product")
+                        .WithMany("Photos")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

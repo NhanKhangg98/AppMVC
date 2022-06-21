@@ -13,16 +13,38 @@
 <div class="text-center">
     <h1 class="display-4">Xin chào</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <style>
-        body {
-          background-image: url("D:\TestCode\AppMVC\AppMVC.Net\Files\DogTestAspNet.jpg");
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
-</style>
+    
 
 </div>
+
+
+
+@*<textarea id="summernoteEditor"></textarea>
+<textarea id="summernoteEditor2"></textarea>
+
+@{
+    var summernote = new AppMVC.Net.Models.Summernote("#summernoteEditor");
+    var summernote2 = new AppMVC.Net.Models.Summernote("#summernoteEditor2", false);
+}
+
+<partial name="_Summernote" model="summernote" />
+<partial name="_Summernote" model="summernote2" />*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @*<p>
     @Url.ActionLink()

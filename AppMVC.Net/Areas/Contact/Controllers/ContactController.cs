@@ -30,7 +30,7 @@ namespace AppMVC.Net.Areas.Contact.Controllers
             return View(await _context.Contacts.ToListAsync());
         }
 
-        [HttpGet("/admin/contact/detail/{id}")]
+        [HttpGet("/admin/contact/details/{id}")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
