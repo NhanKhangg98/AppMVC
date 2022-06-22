@@ -282,3 +282,5 @@ D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Product\Views\
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Product\Views\ViewProduct\_ViewStart.cshtml.g.cs
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryProductSidebar\Default.cshtml.g.cs
 D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Product\Views\ViewProduct\Details.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Areas\Product\Views\ViewProduct\Cart.cshtml.g.cs
+D:\TestCode\AppMVC\AppMVC.Net\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CartPartial.cshtml.g.cs

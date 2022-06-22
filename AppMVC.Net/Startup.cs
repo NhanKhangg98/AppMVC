@@ -21,6 +21,7 @@ using Microsoft.AspNetCore.Identity;
 using AppMVC.Net.Data;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using AppMVC.Net.Areas.Product.Service;
 
 namespace AppMVC.Net
 {
@@ -38,6 +39,12 @@ namespace AppMVC.Net
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDistributedMemoryCache();           // Đăng ký dịch vụ lưu cache trong bộ nhớ (Session sẽ sử dụng nó)
+            services.AddSession(cfg => {                    // Đăng ký dịch vụ Session
+                cfg.Cookie.Name = "appmvc";             // Đặt tên Session - tên này sử dụng ở Browser (Cookie)
+                cfg.IdleTimeout = new TimeSpan(0, 30, 0);    // Thời gian tồn tại của Session
+            });
 
             services.AddOptions();
             var mailsetting = Configuration.GetSection("MailSettings");
@@ -138,6 +145,8 @@ namespace AppMVC.Net
                     builder.RequireRole(RoleName.Administrator);
                 });
             });
+
+            services.AddTransient<CartService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -164,6 +173,8 @@ namespace AppMVC.Net
                     ),
                 RequestPath = "/contents"
             });
+
+            app.UseSession();
 
             app.AddStatusCodePage();
 
