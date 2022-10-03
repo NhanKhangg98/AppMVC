@@ -1,5 +1,6 @@
 ﻿using AppMVC.Net.Models.Blog;
 using AppMVC.Net.Models.Contacts;
+using AppMVC.Net.Models.Orders;
 using AppMVC.Net.Models.Product;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -75,6 +76,22 @@ namespace AppMVC.Net.Models
                 entity.HasIndex(p => p.Slug).IsUnique();
             });
 
+
+
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.HasKey(p => p.OrderID);
+                entity.HasOne(p => p.AppUser).WithMany(p => p.Orders).HasForeignKey("UserID");
+            });
+
+
+            modelBuilder.Entity<OrderDetail>(entity =>
+            {
+                entity.HasKey(p => new {p.OrderID, p.ProductID});
+                entity.HasOne(x => x.Order).WithMany(x => x.OrderDetails).HasForeignKey(x => x.OrderID);
+                entity.HasOne(x => x.Product).WithMany(x => x.OrderDetails).HasForeignKey(x => x.ProductID);
+            });
+
         }
 
         public DbSet<Contact> Contacts { get; set; }
@@ -95,5 +112,7 @@ namespace AppMVC.Net.Models
 
         public DbSet<ProductPhoto> ProductPhotos { get; set; }
 
+
+        public DbSet<Order> Orders { get; set; }
     }
 }

@@ -214,6 +214,62 @@ namespace AppMVC.Net.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("AppMVC.Net.Models.Orders.Order", b =>
+                {
+                    b.Property<int>("OrderID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ShipAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ShipEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ShipName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ShipPhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("OrderID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Orders.OrderDetail", b =>
+                {
+                    b.Property<int>("OrderID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderID", "ProductID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("OrderDetail");
+                });
+
             modelBuilder.Entity("AppMVC.Net.Models.Product.CategoryProduct", b =>
                 {
                     b.Property<int>("Id")
@@ -486,6 +542,28 @@ namespace AppMVC.Net.Migrations
                     b.HasOne("AppMVC.Net.Models.Blog.Post", "Post")
                         .WithMany("PostCategories")
                         .HasForeignKey("PostID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Orders.Order", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.AppUser", "AppUser")
+                        .WithMany("Orders")
+                        .HasForeignKey("UserID");
+                });
+
+            modelBuilder.Entity("AppMVC.Net.Models.Orders.OrderDetail", b =>
+                {
+                    b.HasOne("AppMVC.Net.Models.Orders.Order", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AppMVC.Net.Models.Product.ProductModel", "Product")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

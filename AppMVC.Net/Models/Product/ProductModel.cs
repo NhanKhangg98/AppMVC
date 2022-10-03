@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppMVC.Net.Models.Orders;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -52,6 +53,8 @@ namespace AppMVC.Net.Models.Product
         public List<ProductCategoryProduct> ProductCategoryProducts { get; set; }
 
         public List<ProductPhoto> Photos { get; set; }
+
+        public List<OrderDetail> OrderDetails { get; set; }
 
 
 
