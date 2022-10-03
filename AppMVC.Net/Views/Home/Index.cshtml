@@ -13,9 +13,40 @@
 <div class="text-center">
     <h1 class="display-4">Xin chào</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+
 </div>
 
-<p>
+
+
+@*<textarea id="summernoteEditor"></textarea>
+<textarea id="summernoteEditor2"></textarea>
+
+@{
+    var summernote = new AppMVC.Net.Models.Summernote("#summernoteEditor");
+    var summernote2 = new AppMVC.Net.Models.Summernote("#summernoteEditor2", false);
+}
+
+<partial name="_Summernote" model="summernote" />
+<partial name="_Summernote" model="summernote2" />*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<p>
     @Url.ActionLink()
 </p>
 
@@ -48,3 +79,4 @@
 <p>
     @Url.RouteUrl("neptune2")
 </p>
+*@
